@@ -1,0 +1,27 @@
+## update conda python environment
+1. cd to the dir where env.yaml exists
+2. run "conda update --all"
+3. run "conda env update --file env.yaml"
+4. run "conda clean --all -yf" and then run "pip cache purge" to cleanup temp files
+
+## update pycharm project previously created
+1. copy demo.tts.py into the project previously created
+2. search and open "pycharm-community" from start menu
+3. open the project previously created
+4. run the demo.tts.py to get the results
+
+Notes for "demo.tts.py" script:
+1. the "os.environ['KMP_DUPLICATE_LIB_OK']='True'" line added is aiming to
+   prevent the "duplicated libiomp5md.dll" error. This is an upstream conda design error for
+   Windows system (no such error for Linux) and has no fundamental solutions for this yet.
+2. we could change the line "device = "cuda" if torch.cuda.is_available() else "cpu""
+   into "device = "cpu" if torch.cuda.is_available() else "cpu"" if the GPU memory size is
+   not sufficient.
+3. a "plt.show()" line is added after "plt.imshow(spec[0].cpu().detach())" to actually show
+   the figure, and we need to close the figure to continue running the script.
+4. when "unexpected EOF, expected xxxxx more bytes. The file might be corrupted." occurs,
+   set "force_reload=True" temporarily for the "waveglow = torch.hub.load" command, to
+   re-download the waveglow model
+5. the ipython output relies on jupyter notebook environment which is not setup for now.
+   If we need the jupyter notebook environment, the following link could be used as reference:
+   https://www.jetbrains.com/help/pycharm/jupyter-notebook-support.html
