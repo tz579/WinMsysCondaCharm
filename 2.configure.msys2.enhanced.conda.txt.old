@@ -1,0 +1,43 @@
+## disable admin approval mode
+1. search and open "secpol.msc" from start menu, ignore any shown up warnings
+2. open "local policies" -> "security options"
+3. double click "User Account Control: Run all administrators in Admin Approval Mode"
+4. choose "disabled" and press OK
+5. restart the computer
+
+## install & configure msys2
+1. download "msys2-x86_64-2022xxxx.exe" from https://www.msys2.org/
+2. run msys2-x86_64-2022xxxx.exe and follow the instruction to install msys2 into "C:\msys64"
+3. close the automatically-opened mintty terminal if there is any
+4. copy ".bashrc" into "C:\msys64\home\<your-username>" and replace the pre-existed one
+5. right-click "mintty.reg" and select "merge", choose yes when confirmation pops up.
+6. right-click on the blank area of current folder that contains this instruction and choose "msys2 bash here"
+7. ignore the warning message "ls: cannot access '/usr/local/*/{bin,lib.share/man}/': No such file or directory"
+8. rigth-click on the blank area of the opened msys2 terminal and choose "options"
+9. under "keys" section, check "control+shift+letter shortcuts" option and press save
+10. run "pacman -Syu" in the msys2 terminal and type "y" when any confirmation pops up
+11. re-do step 6 to re-open the msys2 terminal if the terminal closes after step 10
+12. run "pacman -Su" in the msys2 terminal and type "y" when any confirmation pops up
+13. run "pacman -S base-devel" in the msys2 terminal and type "y" when any confirmation pops up
+
+## update conda configurations
+1. right-click on the blank area of current folder that contains this instruction and choose "msys2 bash here"
+2. run "conda list | awk '/pypi/ {print $1}' | grep -Pv llvmlite | xargs pip uninstall -y" # win conda has no separate pip pkg dirs for each py version
+3. run "conda uninstall numba librosa" and type "y" when any confirmation pops up # no sigpy conda pkgs
+4. run "pip cache purge" and then run "conda clean --all -yf"
+5. run "conda config --add channels conda-forge"
+6. run "conda config --append channels nvidia"
+7. run "conda config --append channels intel"
+8. run "conda config --set channel_priority strict"
+9. run "conda update --all" and type "y" when any confirmation pops up
+10. run "conda install mamba" and type "y" when any confirmation pops up
+11. run "mamba install python=3.10" and type "y" when any confirmation pops up
+12. run "mamba update --all" and type "y" when any confirmation pops up
+13. run "mamba env update --file env.yaml"
+14. run "mamba clean --all -yf" and then run "pip cache purge"
+
+## test current configurations
+1. copy "demo.tts.py" into the project previously created
+2. search and open "pycharm-community" from start menu
+3. open the project previously created
+4. run the "demo.tts.py" to get the results
