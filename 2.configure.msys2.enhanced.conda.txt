@@ -15,7 +15,7 @@
 11. rigth-click on the blank area of the opened msys2 terminal and choose "options"
 12. under "keys" section, check "control+shift+letter shortcuts" option and press save
 13. run "pacman -Syu" in the msys2 terminal and type "y" when any confirmation pops up
-14. re-do step 6 to re-open the msys2 terminal if the terminal closes after step 10
+14. re-do step 9 to re-open the msys2 terminal if the terminal closes after step 13
 15. run "pacman -Su" in the msys2 terminal and type "y" when any confirmation pops up
 16. run "pacman -S base-devel" in the msys2 terminal and type "y" when any confirmation pops up
 
