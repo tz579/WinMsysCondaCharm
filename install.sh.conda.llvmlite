@@ -1,3 +1,7 @@
+export \
+    CMAKE_PREFIX_PATH="$(dirname $(which conda))/../" \
+	CONDA_BUILD=1
+
 git clone https://github.com/numba/llvmlite.git
 git -C llvmlite clean -xfdf
 git -C llvmlite pull

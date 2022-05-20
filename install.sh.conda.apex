@@ -1,3 +1,7 @@
+export \
+    CMAKE_PREFIX_PATH="$(dirname $(which conda))/../" \
+	CONDA_BUILD=1
+
 git clone https://github.com/NVIDIA/apex
 git -C apex clean -xfdf
 git -C apex pull
