@@ -10,3 +10,10 @@ __pycache__/
 nohup.*
 *.bin
 *.log
+
+
+apex*/
+dllogger*/
+librosa*/
+numba*/
+llvmlite*/
