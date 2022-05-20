@@ -13,7 +13,7 @@ print(torch.__version__)
 print(torchaudio.__version__)
 
 torch.random.manual_seed(0)
-device = "cpu" if torch.cuda.is_available() else "cpu"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 bundle = torchaudio.pipelines.TACOTRON2_WAVERNN_PHONE_LJSPEECH
