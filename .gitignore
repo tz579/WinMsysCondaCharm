@@ -1,5 +1,12 @@
-.idea/.gitignore
-.idea/CondaTorchCharmWin.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/inspectionProfiles/profiles_settings.xml
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+.idea/
+.mypy_cache/
+*.build/
+
+
+nohup.*
+*.bin
+*.log
