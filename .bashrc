@@ -117,10 +117,23 @@ export CONFIG_SHELL=/bin/bash # needed by autoconf & configure, etc., in additio
 export MAKE_SHELL=/bin/bash # might be needed by make, etc., in addition with (and set to be the same as) chsh-defined $SHELL
 export SHELL=/bin/bash # double secure the chsh-defined $SHELL
 
+alias nohup='loginctl enable-linger; systemd-run --scope --user nohup'
 alias python='python -i'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval "$('/c/ProgramData/Miniconda3/Scripts/conda.exe' 'shell.bash' 'hook')"
-export PATH="/c/ProgramData/Miniconda3/Scripts:/c/ProgramData/Miniconda3:$PATH"
+# eval "$('/c/ProgramData/Miniconda3/Scripts/conda.exe' 'shell.bash' 'hook' 2> /dev/null)"
+# '/c/ProgramData/Miniconda3/Scripts/conda.exe' 'shell.bash' 'hook' > ~/.conda.sh 2> /dev/null
+# source ~/.conda.sh # modified from and should manually keep update with the results of the above line
+# export PATH="/c/ProgramData/Miniconda3/bin:/c/ProgramData/Miniconda3/Scripts:/c/ProgramData/Miniconda3:$PATH"
+export CONDA_EXE='/c/ProgramData/Miniconda3/Scripts/conda.exe'
+SYSP=$(\dirname "${CONDA_EXE}")
+SYSP=$(\dirname "${SYSP}")
+PATH="${SYSP}/bin:${PATH}"
+PATH="${SYSP}/Scripts:${PATH}"
+PATH="${PATH}:${SYSP}/Library/mingw-w64/bin"
+PATH="${PATH}:${SYSP}/Library/usr/bin"
+PATH="${PATH}:${SYSP}/Library/bin"
+PATH="${SYSP}:${PATH}"
+export PATH
 # <<< conda initialize <<<
