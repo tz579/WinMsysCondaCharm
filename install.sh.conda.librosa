@@ -1,0 +1,4 @@
+git clone https://github.com/librosa/librosa.git
+git -C librosa clean -xfdf
+git -C librosa pull
+pip install --no-cache-dir --disable-pip-version-check -v -e librosa

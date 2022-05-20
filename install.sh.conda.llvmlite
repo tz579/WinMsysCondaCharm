@@ -1,0 +1,4 @@
+git clone https://github.com/numba/llvmlite.git
+git -C llvmlite clean -xfdf
+git -C llvmlite pull
+pip install --no-cache-dir --disable-pip-version-check -v -e llvmlite

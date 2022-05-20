@@ -1,0 +1,4 @@
+git clone https://github.com/NVIDIA/dllogger
+git -C dllogger clean -xfdf
+git -C dllogger pull
+pip install --no-cache-dir --disable-pip-version-check -v -e dllogger
