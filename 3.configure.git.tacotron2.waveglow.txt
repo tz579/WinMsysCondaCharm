@@ -2,8 +2,8 @@
 1. run "make me admin" and set the expiring time as long as possible if there is any
 
 ## update conda configurations
-1. copy ".bashrc" into "C:\msys64\home\<your-username>" and replace the pre-existed one
-2. right-click on the blank area of current folder that contains this instruction and choose "msys2 bash here"
+1. right-click on the blank area of current folder that contains this instruction and choose "msys2 bash here"
+2. run "pacman -S git" and type "y" when any confirmation pops up
 3. run "mamba uninstall llvmlite numba librosa" and type "y" when any confirmation pops up
 4. run "pip uninstall llvmlite numba librosa" and type "y" when any confirmation pops up
 5. run "pip uninstall llvmlite numba librosa" again and type "y" when any confirmation pops up
