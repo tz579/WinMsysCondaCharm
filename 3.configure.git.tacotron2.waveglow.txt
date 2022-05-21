@@ -12,10 +12,11 @@
 8. run "mamba env update --file env.yaml"
 9. run "bash install.sh.conda.llvmlite"
 10. run "bash install.sh.conda.numba"
-11. run "bash install.sh.conda.librosa"
-12. run "bash install.sh.conda.dllogger"
-13. run "bash install.sh.conda.apex"
-14. run "mamba clean --all -yf" and then run "pip cache purge"
+11. run "bash install.sh.conda.resampy"
+12. run "bash install.sh.conda.librosa"
+13. run "bash install.sh.conda.dllogger"
+14. run "bash install.sh.conda.apex"
+15. run "mamba clean --all -yf" and then run "pip cache purge"
 
 ## test current configurations
 1. go to "C:\msys64\home\<your-username>" in windows explorer
