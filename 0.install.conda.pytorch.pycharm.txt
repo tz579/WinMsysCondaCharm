@@ -1,3 +1,6 @@
+## get admin privilege
+1. run "make me admin" and set the expiring time as long as possible if there is any
+
 ## install & configure conda
 1. download "Miniconda3 Windows 64-bit" from https://docs.conda.io/en/latest/miniconda.html
 2. run "Miniconda3 Windows 64-bit" and choose "install for all users" when ask

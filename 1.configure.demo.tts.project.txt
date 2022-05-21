@@ -1,3 +1,6 @@
+## get admin privilege
+1. run "make me admin" and set the expiring time as long as possible if there is any
+
 ## update conda python environment
 1. cd to the dir where env.yaml exists
 2. run "conda update --all"
