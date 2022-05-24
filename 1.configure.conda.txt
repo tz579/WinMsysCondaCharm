@@ -1,0 +1,27 @@
+## get admin privilege
+1. run "make me admin" and set the expiring time as long as possible if there is any
+
+## install & configure conda
+1. download "Miniconda3 Windows 64-bit" from https://docs.conda.io/en/latest/miniconda.html
+2. run "Miniconda3 Windows 64-bit" and choose "install for all users" when ask
+3. search and right click "anaconda prompt" from start menu, press "run as Administrator"
+4. run "conda init bash" # previously only initialized for pure windows through installation process
+5. close anaconda prompt
+
+## update conda configurations
+1. search and right click "anaconda prompt" from start menu, press "run as Administrator"
+2. run "conda config --add channels conda-forge"
+3. run "conda config --add channels pytorch"
+4. run "conda config --append channels nvidia"
+5. run "conda config --append channels intel"
+6. run "conda config --append channels numba"
+7. run "conda config --set channel_priority strict"
+8. run "conda update --all" and type "y" when any confirmation pops up
+9. run "conda install mamba" and type "y" when any confirmation pops up
+10. run "mamba install python=3.10" and type "y" when any confirmation pops up
+11. run "mamba update --all" and type "y" when any confirmation pops up
+12. run "mamba env update --file env.yaml"
+13. run "mamba uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up
+14. run "pip uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up
+15. run "pip uninstall llvmlite numba resampy librosa" again and type "y" when any confirmation pops up
+16. run "mamba clean --all -yf" and then run "pip cache purge"

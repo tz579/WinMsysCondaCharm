@@ -1,0 +1,43 @@
+## get admin privilege
+1. run "make me admin" and set the expiring time as long as possible if there is any
+
+## remove pycharm-professional & install pycharm-professional
+1. from system tray, locate and click "jetbrains toolbox"
+2. under the "tools->installed" section, locate "pycharm-professional"
+3. click the "..." button to the right of "pycharm-professional" and select "uninstall"
+4. follow the instruction to uninstall pycharm-professional
+5. under the "tools->available" section, locate "pycharm-professional"
+6. click "install" and follow the instruction to install pycharm-professional
+7. search and open "pycharm-professional" from start menu
+8. in the "license" popup window, choose "activate pycharm" and "get license from jb account"
+9. press "log in to jetbrains account" and follow the instruction to login through web browser
+10. return to the "license" popup window, press "activate"
+11. close pycharm professional window
+
+## configure and test pycharm-professional
+1. type "C:\Users\<your username>" in the address bar of windows explorer to open that location
+2. right click on the blank area of windows explorer and select "new->folder"
+3. recursively create a folder named "Work\Demo_tts"
+4. copy "demo.tts.py" from the dir that contains this instruction into "C:\Users\<your username>\Work\Demo_tts"
+5. if exist, remove the potentially corrupted "C:\Users\<your username>\.cache\torch\checkpoints" dir
+6. search and open "pycharm-professional" from start menu
+7. press "new project" and then press "python interpreter" to expand the drop-down menu
+8. select "previously configured interpreter"
+9. press "..." button on the right side of "previously configured interpreter"
+10. select "conda" on the left side of the popped-up window
+11. type "C:\ProgramData\Miniconda3\python.exe" for "python interpreter path"
+12. type "C:\ProgramData\Miniconda3\scripts\conda.exe" for "conda executable"
+13. press OK to close the pop-up window
+14. type "C:\Users\<your username>/Work/Demo_tts" for "location" section on the top area of the main window
+15. uncheck "create main.py welcome script" option on the bottom of the window if it is checked
+16. press "create" and then press "create from existing sources"
+
+Notes for "demo.tts.py" script:
+1. the "os.environ['KMP_DUPLICATE_LIB_OK']='True'" line added is aiming to
+   prevent the "duplicated libiomp5md.dll" error. This is an upstream conda design error for
+   Windows system (no such error for Linux) and has no fundamental solutions for this yet.
+2. a "plt.show()" line is added after "plt.imshow(spec[0].cpu().detach())" to actually show
+   the figure, and we need to close the figure to continue running the script.
+3. the ipython output relies on jupyter notebook environment which is not setup for now.
+   If we need the jupyter notebook environment, the following link could be used as reference:
+   https://www.jetbrains.com/help/pycharm/jupyter-notebook-support.html

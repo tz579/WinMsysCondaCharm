@@ -1,0 +1,19 @@
+## get admin privilege
+1. run "make me admin" and set the expiring time as long as possible if there is any
+
+## upgrade nvidia driver configurations
+1. go to "www.nvidia.com/Download/index.aspx" in web browser
+2. choose "nvidia rtx/quadro" for product type
+3. choose "quadro rtx series (notebooks)" for product series
+4. choose "quadro rtx 3000" for product
+5. choose "windows 10 64 bit" for operation system
+6. choose "production branch/studio" for download type ("new feature branch" is sometimes even older)
+7. press "search" and then press "download" in the redirected webpage
+8. press "download" again in the further redirected webpage to download the installer
+9. right click "512.78-quadro-rtx-desktop-notebook-win10-win11-64bit-international-dch-whql.exe" and choose "run as administrator"
+10. follow the instruction and select "custom install" when popped up for "installation options"
+11. press "next" and select "perform a clean installation" in the following step
+12. press "next" and follow the instruction to finish the installation
+13. when finished, reboot the computer
+
+## remove old conda & msys2
