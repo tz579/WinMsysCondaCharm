@@ -10,7 +10,7 @@
 6. search "registry editor" from start menu, right click it and choose "run as administrator"
 7. from menubar of the opened registry editor, choose "file -> import"
 8. find the "mintty.reg" provided with this instruction and press "open", press OK when any confirmation pops up
-9. go to "C:\msys64" in windows explorer and right click "msys2.exe" and choose "properties"
+9. open "C:\msys64" in windows explorer and right click "msys2.exe" and choose "properties"
 10. on the "compatibility" tab, check the "run this program as administrator" box and press OK to quit
 11. right click on the blank area of current folder that contains this instruction and choose "msys2 bash here"
 12. ignore the warning message "ls: cannot access '/usr/local/*/{bin,lib.share/man}/': No such file or directory"
@@ -38,7 +38,7 @@
 14. run "bash install.sh.conda.apex"
 
 ## test current configurations
-1. go to "C:\msys64\home\<your-username>" in windows explorer
+1. open "C:\msys64\home\<your-username>" in windows explorer
 2. right click on the blank area and choose "msys2 bash here"
 3. run "mkdir Work" and then run "cd Work"
 4. run "git clone https://github.com/tz579/LJ_tacotron2.git"

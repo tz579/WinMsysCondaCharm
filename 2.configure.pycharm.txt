@@ -15,7 +15,7 @@
 11. close pycharm professional window
 
 ## configure and test pycharm-professional
-1. type "C:\Users\<your username>" in the address bar of windows explorer to open that location
+1. open "C:\Users\<your username>" in windows explorer
 2. right click on the blank area of windows explorer and select "new->folder"
 3. recursively create a folder named "Work\Demo_tts"
 4. copy "demo.tts.py" from the dir that contains this instruction into "C:\Users\<your username>\Work\Demo_tts"

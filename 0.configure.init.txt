@@ -16,4 +16,8 @@
 12. press "next" and follow the instruction to finish the installation
 13. when finished, reboot the computer
 
-## remove old conda & msys2
+## remove old conda
+1. type "C:\ProgramData\Miniconda3" in the address bar of windows explorer to open that location
+2. right click "Uninstall-Miniconda3.exe" and click "run as administrator"
+3. follow the instruction to uninstall old conda
+4. manually remove "C:\ProgramData\Miniconda3" if it's not removed yet
