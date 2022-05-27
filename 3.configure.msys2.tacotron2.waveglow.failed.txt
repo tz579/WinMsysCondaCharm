@@ -45,7 +45,7 @@
 5. run "cd LJ_tacotron2"
 6. run "nohup bash scripts.1epoch.sh > scripts.1epoch.log &"
 7. run "tail -f scripts.1epoch.log" to monitor the output
-8. press "ctrl+x" whenever you want to stop monitoring the output
+8. press "ctrl+c" whenever you want to stop monitoring the output
 9. re-run step 7 whenever you want to monitor the output again
 10. on notebook quadro rtx 3000 max-q, 8-11 min/epoch for tacotron2 and 5-7 min/epoch for waveglow
 11. when everything is finished, go to output/ in windows explorer to check results
