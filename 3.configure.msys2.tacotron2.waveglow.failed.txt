@@ -26,16 +26,19 @@
 2. run "mamba update --all" and type "y" when any confirmation pops up
 3. run "mamba env update --file env.yaml"
 4. run "pacman -S git" and type "y" when any confirmation pops up
-5. run "mamba uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up
-6. run "pip uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up
-7. run "pip uninstall llvmlite numba resampy librosa" again and type "y" when any confirmation pops up
-8. run "mamba clean --all -yf" and then run "pip cache purge"
-9. run "bash install.sh.conda.llvmlite" # too difficult to configure, discard the whole method from this step
-10. run "bash install.sh.conda.numba"
-11. run "bash install.sh.conda.resampy"
-12. run "bash install.sh.conda.librosa"
-13. run "bash install.sh.conda.dllogger"
-14. run "bash install.sh.conda.apex"
+5. run "mamba uninstall `mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`"
+6. run "pip uninstall `mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`"
+7. run "pip uninstall `mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`"
+8. run "mamba uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up
+9. run "pip uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up
+10. run "pip uninstall llvmlite numba resampy librosa" again and type "y" when any confirmation pops up
+11. run "mamba install -c numba llvmlite"
+12. run "mamba clean --all -yf" and then run "pip cache purge"
+13. run "bash install.sh.conda.numba" # too difficult to configure, discard the whole method from this step
+14. run "bash install.sh.conda.resampy"
+15. run "bash install.sh.conda.librosa"
+16. run "bash install.sh.conda.dllogger"
+17. run "bash install.sh.conda.apex"
 
 ## test current configurations
 1. open "C:\msys64\home\<your-username>" in windows explorer
