@@ -5,4 +5,5 @@ export \
 git clone https://github.com/numba/numba.git
 git -C numba clean -xfdf
 git -C numba pull
+git -C numba reset --hard 96224dd
 pip install --no-cache-dir --disable-pip-version-check -v -e numba
