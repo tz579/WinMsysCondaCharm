@@ -1,12 +1,6 @@
-llvmpkglist=`mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`
-mamba uninstall "${llvmpkglist}"
-pip uninstall "${llvmpkglist}"
-pip uninstall "${llvmpkglist}"
+mamba uninstall libllvm11 llvm-tools llvmdev
+pip uninstall libllvm11 llvm-tools llvmdev
+pip uninstall libllvm11 llvm-tools llvmdev
 
-mamba uninstall llvmlite numba resampy librosa
-pip uninstall llvmlite numba resampy librosa
-pip uninstall llvmlite numba resampy librosa
-
-mamba install -c numba llvmlite
 mamba clean --all -yf
 pip cache purge

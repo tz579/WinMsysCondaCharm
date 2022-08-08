@@ -1,0 +1,5 @@
+conda config --remove channels numba
+
+mamba uninstall google-auth-oauthlib tensorboard tensorboard-data-server tensorboard-plugin-wit
+pip uninstall google-auth-oauthlib tensorboard tensorboard-data-server tensorboard-plugin-wit
+pip uninstall google-auth-oauthlib tensorboard tensorboard-data-server tensorboard-plugin-wit

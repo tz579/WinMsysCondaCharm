@@ -1,0 +1,7 @@
+mamba uninstall llvmlite numba # typically numba-provided
+pip uninstall llvmlite numba # in case mamba did not unregister pip version
+pip uninstall llvmlite numba # in case more than one versions of pkg exist
+
+mamba uninstall resampy librosa # typically conda-forge-provided
+pip uninstall resampy librosa # in case mamba did not unregister pip version
+pip uninstall resampy librosa # in case more than one versions of pkg exist
