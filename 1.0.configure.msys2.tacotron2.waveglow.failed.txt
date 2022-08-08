@@ -27,11 +27,8 @@
 3. run "mamba env update --file env.yaml"
 4. run "pacman -S git" and type "y" when any confirmation pops up
 5. run "bash install.sh.conda.additional" and then run "pip cache purge"
-6. run "bash install.sh.conda.numba" # too difficult to configure, discard the whole method from this step
-7. run "bash install.sh.conda.resampy"
-8. run "bash install.sh.conda.librosa"
-9. run "bash install.sh.conda.dllogger"
-10. run "bash install.sh.conda.apex"
+6. run "bash install.sh.conda.dllogger" # too difficult to configure, discard the whole method from this step
+7. run "bash install.sh.conda.apex"
 
 ## test current configurations
 1. open "C:\msys64\home\<your-username>" in windows explorer
